@@ -52,6 +52,7 @@ header {
 }
 
 .header img {
+  position: relative;
   height: 2rem;
   margin-left: 1.5rem;
 }
@@ -83,20 +84,24 @@ header {
 
 }
 
-@media only screen and (min-width: 701px) {
-  nav img {
+@media only screen and (min-width: 641px) {
+  .menuicon {
     display: none;
   }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 640px) {
   header {
     height: 4rem;
   }
 
+  .menuicon {
+    display: inline-block;
+  }
+
   #colmar,
   #academy,
-  nav span {
+  .menu {
     display: none;
   }
 }
@@ -106,7 +111,7 @@ header {
 .banner {
   display: flex;
   align-items: center;
-  background-color: rgba(153, 1, 44, .1);
+  background-color: #ffffcc;
   width: 100%;
   height: 32rem;
   }
@@ -123,24 +128,31 @@ header {
   }
 
   .bannerside {
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: left;
     padding: 1.5rem;
-    line-height: 1.4;
+    line-height: 1.2;
   }
 
   .bannerside h1 {
     font-size: 2.5rem;
     font-weight: bold;
+    margin-bottom: 1rem;
   }
 
   .bannerside p {
     font-size: 1.3rem;
+    text-align: center;
+    margin: 1rem auto;
   }
 
   .start {
     background-color: #99012C;
     width: 100%;
+    margin: 1rem auto;
+    border-radius: 5px;
   }
 
   .bannerside a {
