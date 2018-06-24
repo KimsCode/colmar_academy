@@ -22,7 +22,13 @@
 html {
   font-size: 16px;
   color: #99012C;
+  box-sizing: border-box;
+}
 
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 body {
@@ -110,7 +116,7 @@ header {
 .banner {
   display: flex;
   align-items: center;
-  background-color: #ffffe6;
+  background-color: #ffffcc;
   width: 100%;
   height: 32rem;
   }
@@ -166,7 +172,7 @@ header {
   .information {
     display: flex;
     align-items: center;
-    background-color: #ffffff;
+    background-color: #fff;
     width: 100%;
     height: 35.7rem;
     border: 1px solid black;
@@ -174,7 +180,8 @@ header {
 
   .mainarticle {
     width: 60%;
-
+    padding-bottom: 2rem;
+    padding-top: 2rem;
   }
 
   .information img {
@@ -187,9 +194,6 @@ header {
     font-size: 1.75rem;
     font-weight: bold;
     padding: 0 1.5rem 1.5rem 1.5rem;
-    /*padding-right: 1.5rem;
-    padding-bottom: 1.5rem;
-    padding-left: 1.5rem;*/
   }
 
   .mainarticle {
@@ -207,8 +211,6 @@ header {
     padding: 1rem 1.5rem;
   }
 
-
-
   .infoside {
     display: flex;
     flex-direction: column;
@@ -218,13 +220,17 @@ header {
 
   .infomini {
     display: inline-flex;
+    align-items: stretch;
     }
 
   .infomini img {
     width: 35%;
     height: 33.333%;
     margin-left: 1rem;
-    padding-top: .5rem;
+    margin-top: 1rem;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    border-bottom: 2px solid #ffffcc;
   }
 
   .minicontent {
@@ -232,6 +238,8 @@ header {
     width: 65%;
     text-align: left;
     line-height: 2;
+    padding-top: 1rem;
+    margin: .25rem;
     }
 
   h3 {
@@ -241,5 +249,55 @@ header {
   }
 
   .lecture {
-    background-color: #ffffe6;
+    background-color: #ffffcc;
   }
+
+/*Courses Section*/
+
+  .courses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffcc;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    }
+
+    .courses h2 {
+
+      text-align: : center;
+      padding: 2rem auto;
+
+    }
+
+    .course-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .course {
+      width: 17rem;
+      height: auto;
+      margin: 1rem;
+      background-color: #fff;
+
+    }
+
+    .course img {
+      width: 100%;
+      height: auto;
+    }
+
+    .description {
+      padding-top: 1rem;
+      padding-bottom: 1.5rem;
+      padding-left: 1rem;
+      line-height: 1.2;
+    }
+
+    .description .subject {
+      padding:.5rem 0;
+    }
