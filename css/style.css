@@ -106,6 +106,14 @@ a {
   color: #aa5535;
 }
 
+a:hover {
+color: #f78811;
+}
+
+a:visited {
+  color: #c2623C;
+}
+
 h2 {
   font-size: 1.75rem;
   font-weight: bold;
@@ -124,6 +132,8 @@ header {
 }
 
 .header {
+  display: inline-flex;
+  align-items: center;
   flex-grow: 1;
 }
 
@@ -148,11 +158,12 @@ header {
 }
 
 #colmar {
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
 #academy {
-  font-weight: lighter;
+  font-size: 1.5rem;
   opacity: .2;
 }
 
@@ -176,6 +187,10 @@ header {
     display: flex;
     justify-content: space-around;
     flex-grow: 1;
+  }
+
+  .menuicon img:hover {
+    color: #c2623c;
   }
 }
 
@@ -228,10 +243,17 @@ header {
     border-radius: 5px;
   }
 
+  .start:hover {
+    background-color: #c2623C;
+  }
+
+  .start:visited {
+    background-color: #c2623C;
+  }
+
   .start p {
     text-align: center;
     color: #fff;
-    /*background-color: #aa5535;*/
   }
 
   .bannerside a {
@@ -242,7 +264,6 @@ header {
 
   @media only screen and (max-width: 480px) {
     .content {
-      /*display: flex;*/
       justify-content: flex-start;
       flex-direction: column;
     }
@@ -279,7 +300,6 @@ header {
     background-color: #fff;
     width: 100%;
     height: auto;
-
   }
 
   .mainarticle {
@@ -462,8 +482,7 @@ header {
       }
 
       .courses .container {
-      /*margin: 0 auto;*/
-      width: 100%
+        width: 100%
       }
 
       .courses {
@@ -488,6 +507,13 @@ header {
         padding: 1rem auto 3rem 2rem;
         margin: .5rem;
         line-height: 4rem;
+      }
+
+      .course-list a:hover {
+        background-color: #f78811;
+        transition: background-color 1s ease-in .5s;
+        color: #000;
+        transition: color .5s ease-in .5s;
       }
     }
 
@@ -562,7 +588,6 @@ header {
       margin-right: 1rem;
       padding-top: .75rem;
       padding-bottom: .75rem;
-
     }
 
     .minicontent {
@@ -594,7 +619,6 @@ header {
         display: flex;
         width: 100%;
         height: auto;
-        /*margin: 1rem 0 1.5rem 0;*/
       }
 
       .thesis-mobile video {
