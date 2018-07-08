@@ -37,8 +37,31 @@ body {
   margin: 0;
 }
 
+.container {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  /*height: auto;*/
+  margin: auto;
+  background-color: #fff;
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+    /*flex-direction: column;*/
+  }
+}
+
 a {
   color: #99012C;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  margin: 2rem auto;
 }
 
 /*Header Section*/
@@ -57,16 +80,13 @@ header {
 }
 
 .header img {
-  position: relative;
   height: 2rem;
   margin-left: 1.5rem;
 }
 
-.header span {
-  display: inline-block;
-  font-size: 1rem;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+#colmar,
+#academy {
+  margin: auto 0rem;
 }
 
 .menu {
@@ -89,25 +109,26 @@ header {
 
 }
 
-@media only screen and (min-width: 641px) {
+@media only screen and (min-width: 481px) {
   .menuicon {
     display: none;
   }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 480px) {
   header {
     height: 4rem;
   }
 
-  .menuicon {
-    display: inline-block;
-  }
-
-  #colmar,
-  #academy,
+  .header,
   .menu {
     display: none;
+  }
+
+  .menuicon {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
   }
 }
 
@@ -118,7 +139,7 @@ header {
   align-items: center;
   background-color: #ffffcc;
   width: 100%;
-  height: 32rem;
+  height: auto;
   }
 
   .content {
@@ -149,7 +170,7 @@ header {
 
   .bannerside p {
     font-size: 1.3rem;
-    text-align: center;
+    text-align: left;
     margin: 1rem auto;
   }
 
@@ -160,11 +181,44 @@ header {
     border-radius: 5px;
   }
 
+  .start p {
+    text-align: center;
+  }
+
   .bannerside a {
     color: white;
     font-weight: bold;
-    text-align: center;
     padding: .5rem auto;
+  }
+
+  @media only screen and (max-width: 480px) {
+    .content {
+      /*display: flex;*/
+      justify-content: flex-start;
+      flex-direction: column;
+    }
+
+    .banner img {
+      width: 100%;
+    }
+
+    .banner h1,
+    .banner p {
+    padding-left: 1rem;
+    }
+
+    .banner h1 {
+      padding: 2rem 0;
+    }
+
+    /*.banner p {
+      text-align: left;
+    }*/
+
+    .start p {
+      padding-top: 1.5rem;
+      padding-bottom: 2rem;
+    }
   }
 
   /*Information Section*/
@@ -174,7 +228,7 @@ header {
     align-items: center;
     background-color: #fff;
     width: 100%;
-    height: 35.7rem;
+    height: auto;
 
   }
 
@@ -188,12 +242,6 @@ header {
     height: auto;
     width: 100%;
     padding: 2rem 1.5rem;
-  }
-
-  h2 {
-    font-size: 1.75rem;
-    font-weight: bold;
-    padding: 0 1.5rem 1.5rem 1.5rem;
   }
 
   .mainarticle {
@@ -214,23 +262,21 @@ header {
   .infoside {
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 40%;
+    height: auto;
   }
 
   .infomini {
     display: inline-flex;
-    align-items: stretch;
-    }
+    align-items: center;
+    border-bottom: 2px solid #ffffcc;
+  }
 
   .infomini img {
     width: 35%;
-    height: 33.333%;
+    height: auto;
     margin-left: 1rem;
-    margin-top: 1rem;
-    padding-top: .75rem;
-    padding-bottom: .75rem;
-    border-bottom: 2px solid #ffffcc;
+
   }
 
   .minicontent {
@@ -238,18 +284,47 @@ header {
     width: 65%;
     text-align: left;
     line-height: 2;
-    padding-top: 1rem;
-    margin: .25rem;
-    }
+    padding-bottom: 1.5rem;
+  }
 
   h3 {
     font-size: 1.25rem;
     font-weight: bold;
-    padding-top: 1.75rem;
   }
 
   .lecture {
     background-color: #ffffcc;
+  }
+
+  @media only screen and (min-width: 481px) {
+    .smscrn {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    .mainarticle,
+    .lrgscrn {
+      display: none;
+    }
+
+    .infomini {
+      flex-direction: column;
+    }
+
+    .infomini img {
+      width: 100%;
+      height: auto;
+      padding: 1rem;
+    }
+
+    .minicontent {
+      padding: .5rem;
+    }
+
+    .lecture {
+      background-color: #fff;
+    }
   }
 
 /*Courses Section*/
@@ -302,6 +377,49 @@ header {
       padding:.5rem 0;
     }
 
+    @media only screen and (min-width: 481px) {
+      .course-list {
+        display: none;
+      }
+    }
+
+    @media only screen and (max-width: 480px) {
+      .course-content {
+        display: none;
+      }
+
+      .courses .container {
+      margin: 0 auto;
+      width: 100%
+      }
+
+      .courses {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: #fff;
+      }
+
+      .course-list {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      .course-list a {
+        /*display: block;*/
+        background-color: #ffffcc;
+        width: 100%;
+
+        font-weight: bold;
+        padding: 1rem auto 1.5rem 1rem;
+        margin: .5rem;
+      }
+    }
+
+
     /*Thesis Exhibit Section*/
 
     .thesis {
@@ -330,7 +448,7 @@ header {
     }
 
     .thesis-mainarticle video {
-      width: 60%;
+      width: 100%;
       height: auto;
       padding: 1.5rem;
     }
@@ -349,39 +467,55 @@ header {
     .thesis-infoside {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: baseline;
       width: 40%;
+      height: auto;
+      padding-bottom: 2rem;
     }
 
     .thesis-infomini {
       display: inline-flex;
-      align-items: stretch;
+      align-items: center;
+      border-bottom: 2px solid #ffffcc;
       }
 
     .thesis-infomini img {
       width: 35%;
-      height: 33.333%;
+      height: auto;
       margin-left: 1rem;
       margin-top: 1rem;
       padding-top: .75rem;
       padding-bottom: .75rem;
-      border-bottom: 2px solid #ffffcc;
+
     }
 
-    /*.minicontent {
+    .minicontent {
       font-size: .8125rem;
       width: 65%;
       text-align: left;
       line-height: 2;
-      padding-top: 1rem;
       margin: .25rem;
-      }*/
+      }
 
     h3 {
       font-size: 1.25rem;
       font-weight: bold;
       padding-top: 1.75rem;
     }
+
+    @media only screen and (max-width: 480px) {
+      .thesis-content {
+        display: none;
+      }
+
+      .thesis-mobile {
+        display: flex;
+        width: 100%;
+        height: auto;
+        margin: 1rem 0 1.5rem 0;
+      }
+    }
+
 
     /*Footer Section*/
 
@@ -398,4 +532,10 @@ header {
 
     footer .terms {
       padding-left: .5rem;
+    }
+
+    @media only screen and (max-width: 480px) {
+      .terms {
+        display: none;
+      }
     }
